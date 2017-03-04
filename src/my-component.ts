@@ -3,7 +3,7 @@ import * as Vue from 'vue';
 import * as AppTemplate from './my-component.html';
 import { Component, Prop, Watch, Lifecycle, p } from 'av-ts'
 
-@Component({ template: AppTemplate, name: 'my-component' })
+@Component({ template: AppTemplate })
 export class MyComponent extends Vue {
 
     name = `Mike Reynolds`
