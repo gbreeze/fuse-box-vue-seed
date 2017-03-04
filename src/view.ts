@@ -6,6 +6,11 @@ import { VueComponent, Prop } from 'vue-typescript'
 @VueComponent({ template: AppTemplate })
 export class MyComponent extends Vue {
 
+    constructor() {
+        super()
+        this.timer()
+    }
+
     name = `Mike Reynolds`
     currentTime = new Date()
 
@@ -13,9 +18,5 @@ export class MyComponent extends Vue {
         setInterval(() => {
             this.currentTime = new Date();
         }, 1000)
-    }
-
-    get cT(): Date {
-        return this.currentTime
     }
 }
