@@ -1,15 +1,12 @@
 //import * as Vue from 'vue/dist/vue.js';
 import * as Vue from 'vue';
 
-import './view';
+import {MyComponent} from './my-component';
 import './main.scss';
 
-
-
 new Vue({
-    el: '#app'
+    el: '#app',
+    components:{
+        MyComponent
+    }
 })
-
-
-//// error
-// https://github.com/vuejs/vue-router/issues/713

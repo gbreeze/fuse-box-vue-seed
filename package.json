@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "vue": "^2.2.1",
-    "vue-typescript": "^0.7.0"
+    "av-ts": "^0.7.1"
   }
 }

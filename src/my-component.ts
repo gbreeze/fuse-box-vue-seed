@@ -1,15 +1,10 @@
 //import * as Vue from 'vue/dist/vue.js';
 import * as Vue from 'vue';
-import * as AppTemplate from './app-template.html';
-import { VueComponent, Prop } from 'vue-typescript'
+import * as AppTemplate from './my-component.html';
+import { Component, Prop, Watch, Lifecycle, p } from 'av-ts'
 
-@VueComponent({ template: AppTemplate })
+@Component({ template: AppTemplate, name: 'my-component' })
 export class MyComponent extends Vue {
-
-    constructor() {
-        super()
-        this.timer()
-    }
 
     name = `Mike Reynolds`
     currentTime = new Date()
@@ -19,4 +14,10 @@ export class MyComponent extends Vue {
             this.currentTime = new Date();
         }, 1000)
     }
+
+    @Lifecycle mounted() {
+        console.log('mounted')
+        this.timer()
+    }
+
 }
